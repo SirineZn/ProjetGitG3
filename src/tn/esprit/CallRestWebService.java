@@ -20,6 +20,7 @@ public class CallRestWebService {
 		HttpGet request = new HttpGet(endpoint);
 		String ip = "not found";
 		try {
+			//commentaire de houda 
 			HttpResponse response = client.execute(request);
 			String jsonResponse = EntityUtils.toString(response.getEntity());
 			System.out.println("Response as String : " + jsonResponse);
@@ -28,5 +29,5 @@ public class CallRestWebService {
 			ip = responseObj.getString("origin");
 			System.out.println("ip : " + ip);
 		} catch (IOException e) { e.printStackTrace(); }
-	}
+	} //comment de houda in houda'sbranch 
 }
